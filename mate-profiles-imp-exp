@@ -1,0 +1,9 @@
+--- export ---
+#!/bin/bash
+dconf dump /org/mate/terminal/global/ > mate-terminal-global.dconf
+dconf dump /org/mate/terminal/profiles/ > mate-terminal-profiles.dconf
+
+--- import ---
+#!/bin/bash
+dconf load /org/mate/terminal/global/ < mate-terminal-global.dconf
+dconf load /org/mate/terminal/profiles/ < mate-terminal-profiles.dconf
